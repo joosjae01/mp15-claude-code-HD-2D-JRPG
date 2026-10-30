@@ -30,10 +30,6 @@
 
 ### 소스코드 작성 시
 `@Docs\Claude\Code\CodeStyleConvention.md`
-`@Docs\Claude\Code\DevelopManagement.md`
-
-### 기능 명세 작성 시
-`@Docs\Claude\DetailsDocument.md`
 
 ### Github Issues 등록 시
 `/create-issue` 스킬을 호출한다. (지침 문서는 스킬이 필요한 섹션만 읽음)
