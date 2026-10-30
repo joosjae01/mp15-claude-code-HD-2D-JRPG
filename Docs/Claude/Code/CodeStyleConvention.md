@@ -1,4 +1,4 @@
-## B. 코드 스타일 컨벤션
+# 코드 스타일 컨벤션
 
 ### (1) 필드 / 프로퍼티 / 지역변수 명
 - 줄임말을 만들지 않습니다. (ex. GameObject = go)
@@ -87,3 +87,4 @@
     7. 유니티 라이프사이클 메서드 (Awake → OnEnable → Start → Update → OnDisable → OnDestroy)
     8. private 메서드
     9. public 메서드
+    10. 캐싱 메서드 (`(3) 스크립트 명` 의 `5. 캐싱`)

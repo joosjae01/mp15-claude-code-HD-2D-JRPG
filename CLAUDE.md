@@ -16,20 +16,28 @@
 
 ## 규칙 문서 관리
 
-- 규칙 문서는 `Docs/` 하위 카테고리 폴더(`Claude/`, `Code/`)에 둔다.
+- 규칙 문서는 `Docs/` 하위 카테고리 폴더에 둔다.
+    - `Claude/` : Claude 행동, 업무 규칙 (`Claude/Code/` : 코드 작성 규칙)
+    - `Context/` : 프로젝트 컨벤션
+    - `Documentation/` : 문서 작성 규칙
+    - `Template/` : 양식
+    - `Temp/` : 업무용 임시 문서
 - 규칙 하나는 문서 한 곳에만 적는다(규칙의 단일출처 유지). 규칙이 바뀌면 그 한 곳만 고친다.
 - 새 문서를 만들면, 매 세션 필요한 것은 "상시 로드"에  `@경로`로, 특정 작업 때만 필요한 것은 "온디맨드 참조" 에 등록한다.
 
 
 ## 상시 로드 (매 세션 적용)
-@Docs\Claude\ClaudeCodeRules.md
-@Docs\Claude\WorkFlowRules.md
-@Docs\TechSpec.md
+@Docs/Claude/ClaudeCodeRules.md
+@Docs/Claude/WorkFlowRules.md
+@Docs/TechSpec.md
 
 ## 온디맨드 참조 (매 세션 읽지 않음 - 해당 작업을 할 때에만 읽음)
 
 ### 소스코드 작성 시
-`@Docs\Claude\Code\CodeStyleConvention.md`
+`@Docs/Claude/Code/CodeStyleConvention.md`
+
+### Commit, Branch 명 안내 시
+`@Docs/Context/GitConvention.md`
 
 ### Github Issues 등록 시
 `/create-issue` 스킬을 호출한다. (지침 문서는 스킬이 필요한 섹션만 읽음)

@@ -8,7 +8,7 @@
 
 ## 0. 전체 흐름
 
-- 모든 업무는 아래 흐름을 따른다. 단계를 건너뛰지 않는다.
+- 모든 업무는 아래 흐름을 따른다. 단계를 건너뛰지 않는다. (단순 수정의 브리핑 생략은 `ClaudeCodeRules.md` 의 `기능 구현 착수 규칙` 을 따른다)
 - 업무에 착수할 때에는 기존 문서와 이 다이어그램을 참고한다.
 
 ```mermaid
@@ -55,8 +55,7 @@ flowchart TD
 ## 3. 이슈 생성
 
 - `/create-issue` 스킬로 수행한다. 아래는 스킬이 따르는 규칙이다.
-- `Docs\Documentation\Github Issue Rule` 의 작성 규칙과 `Docs\Template\IssueTemplate.md` 양식을 따른다.
-- `배경 / 목적` 은 사용자에게 질문해 채운다. 답을 받지 못하면 이슈를 생성하지 않는다.
+- `Docs/Documentation/GithubIssueRule.md` 의 작성 규칙과 `Docs/Template/IssueTemplate.md` 양식을 따른다.
 - `버그 발생` 의 경우, 아래 항목을 사용자에게 질문해 `배경 / 목적` 에 기재한다.
     1. 재현 절차
     2. 기대 동작
@@ -70,13 +69,11 @@ flowchart TD
 
 - 브리핑 전에 업무와 관련된 기존 문서와 코드를 먼저 읽는다.
     - `CLAUDE.md` 의 온디맨드 참조 중 업무에 해당하는 문서
-    - `Docs\Details\` 의 기능 명세
     - 수정 대상이 되는 기존 스크립트
-- 읽기만 하고 세운 결론은 "미검증" 으로 표기한다.
 
 ### (2) 브리핑 형식
 
-- `Docs\Claude\ClaudeCodeRules.md` 의 `기능 구현 착수 규칙` 형식을 따른다.
+- `Docs/Claude/ClaudeCodeRules.md` 의 `기능 구현 착수 규칙` 형식을 따른다.
 - 업무 분류에 따라 아래 항목을 추가한다.
 
 | 분류 | 추가 항목 |
@@ -94,29 +91,19 @@ flowchart TD
 
 ### (1) 착수 전 확인
 
-- 현재 브랜치가 `main`, `Develop` 이면 작업을 거부하고, feature 브랜치로 변경하도록 안내한다.
-- 브랜치명은 `Docs\Context\GitConvention.md` 의 `Branch 컨벤션` 을 따르도록 안내한다.
-- 해당 Issue의 담당자(Assignees)를 사용자로 지정한다.
-- `Docs\Details\` 에서 업무와 관련된 기술 문서를 확인한다.
-    - 관련 문서가 있으면 그 명세를 기준으로 작업한다. 명세와 다르게 구현해야 하면 착수 전에 보고한다.
-    - 관련 문서가 없고 새 기술을 적용하는 업무라면, `DevelopManagement.md` 의 `기술 적용 규칙` 에 따라 명세를 먼저 작성해 승인받는다.
+- 현재 브랜치는 `CLAUDE.md` 의 `절대 원칙` 1번을 따른다.
+- 브랜치 변경이 필요하면, 브랜치명은 `Docs/Context/GitConvention.md` 의 `Branch Convention` 을 따르도록 안내한다.
 
 ### (2) 작업 중
 
-- 브리핑에서 승인받은 파일과 범위만 작업한다.
-- 범위 밖의 문제를 발견하면 보고만 하고 수정하지 않는다.
+- 작업 범위는 `ClaudeCodeRules.md` 의 `작업 범위 규칙` 을 따른다.
 - 작업 중 브리핑 내용과 달라져야 하는 경우, 작업을 멈추고 변경 사항을 다시 브리핑한다.
 - 업무별로 아래 문서를 기준으로 작업한다.
 
 | 분류 | 기준 문서 |
 | --- | --- |
-| 기능 구현 / 버그 발생 | `Docs\TechSpec.md`, `Docs\Claude\Code\CodeStyleConvention.md`, `Docs\Claude\Code\DevelopManagement.md` |
-| 기술 적용안 명세 | `Docs\Claude\DetailsDocument.md` |
+| 기능 구현 / 버그 발생 | `Docs/TechSpec.md`, `Docs/Claude/Code/CodeStyleConvention.md` |
 | 문서 작성 | 같은 카테고리의 기존 문서 (스타일 통일) |
-
-### (3) 작업 완료
-
-- `기능 구현`, `버그 발생` 은 `DevelopManagement.md` 의 `테스트 확인 규칙` 에 따른 산출물을 함께 준비한다.
 
 ## 6. 사용자 검수 (작업 결과)
 
@@ -144,7 +131,7 @@ flowchart TD
 ## 7. PR 작성
 
 - `/create-pr` 스킬로 수행한다. 아래는 스킬이 따르는 규칙이다.
-- `Docs\Template\PullRequestTemplate.md` 양식과 `Docs\Context\GitConvention.md` 의 `Pull Request 컨벤션` 을 따른다.
+- `Docs/Template/PullRequestTemplate.md` 양식을 따른다.
 - 관련 이슈가 있으면 `close #이슈번호` 로 연결한다. 없으면 `관련 이슈` 섹션에 "없음" 을 기재한다.
 - 작업 브랜치가 원격에 Push 되어 있는지 확인한다. 되어 있지 않으면 사용자에게 Push 를 요청한다.
 - PR 초안을 먼저 보여주고, 승인 후 생성한다.
@@ -158,4 +145,4 @@ flowchart TD
 
 - 머지 후 관련 이슈가 닫혔는지 확인한다. 닫히지 않았다면 사용자 승인 후 닫는다.
 - 머지된 브랜치는 사용자가 삭제하도록 안내한다.
-- 업무를 위해 만든 임시 문서 (`Docs\Temp\` 등) 가 있다면, 사용자 승인 후 삭제한다.
+- 업무를 위해 만든 임시 문서 (`Docs/Temp/` 등) 가 있다면, 사용자 승인 후 삭제한다.

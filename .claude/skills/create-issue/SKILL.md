@@ -10,16 +10,14 @@ description: Github Issue 를 프로젝트 규칙에 따라 작성하고 등록�
 ## 참조 문서
 
 - 절차 : `Docs/Claude/WorkFlowRules.md` 의 `2. 이슈화 여부`, `3. 이슈 생성`
-- 섹션별 작성 규칙, Label : `Docs/Documentation/Github Issue Rule`
+- 섹션별 작성 규칙, Label : `Docs/Documentation/GithubIssueRule.md`
 - 양식 : `Docs/Template/IssueTemplate.md`
 
 ## 절차
 
 1. 위 참조 문서를 읽는다.
 2. 업무 분류에 따라 이슈화 여부를 판단한다. (`WorkFlowRules.md` 2장)
-3. `배경 / 목적` 에 기재할 내용을 사용자에게 질문한다.
-    - 답을 받지 못하면 이슈를 생성하지 않고 종료한다.
-    - `버그 발생` 은 재현 절차, 기대 동작, 실제 동작을 질문한다.
+3. `배경 / 목적` 에 기재할 내용을 사용자에게 질문한다. (`WorkFlowRules.md` 3장, `GithubIssueRule.md` 2장)
 4. 양식과 작성 규칙에 따라 이슈 초안을 작성해 사용자에게 보여준다.
     - Label 도 함께 제시한다.
 5. 승인을 받으면 `gh` CLI 로 등록한다.
