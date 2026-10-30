@@ -14,6 +14,7 @@
 | :memo: | Docs 이하 폴더의 문서 생성 및 삭제/수정 | :memo: Modify `example.md` |
 | :recycle: | 기능 개선을 위한 로직 변경 | :recycle: Implement A* Algorithm instead NavMeshAgent |
 | :truck: | 파일 위치 이동 업무 | :truck: Move `example.cs` → `Example/` |
+| :fire: | 파일, 코드 삭제 | :fire: Delete `example.md` |
 
 ## Branch Convention
 
@@ -27,3 +28,4 @@
 | --- | --- | --- |
 | feature | 기능 개발, 구현 | feature/joosjae01-game-manager |
 | fix | 버그 수정 (로직 변경) | fix/joosjae01-player-collision |
+| docs | 문서 생성 및 수정 | docs/joosjae01-modify-document |

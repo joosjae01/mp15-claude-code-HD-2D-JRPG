@@ -1,7 +1,7 @@
 # PullRequest Template
 
 > PullRequest 작성시 활용하는 문서 양식이다.
-> PullRequest를 작성할 때에는 작업 내용에 따라서 Feat, Fix, Refactor 태그를 활용한다.
+> PullRequest를 작성할 때에는 작업 내용에 따라서 `Docs/Documentation/GithubIssueRule.md` 의 Label 을 활용한다.
 
 ## 관련 이슈
 
