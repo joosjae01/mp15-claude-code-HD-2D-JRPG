@@ -29,3 +29,14 @@
 | feature | 기능 개발, 구현 | feature/joosjae01-game-manager |
 | fix | 버그 수정 (로직 변경) | fix/joosjae01-player-collision |
 | docs | 문서 생성 및 수정 | docs/joosjae01-modify-document |
+
+## Pull Request Convention
+
+> PR 제목은 `Commit Convention` 을 따른다. (gitmoji 접두어 + 동사로 시작하는 영어)
+>
+> 이슈 제목 규칙 (`GithubIssueRule.md`) 과 혼동하지 않는다.
+
+| 예시 |
+| --- |
+| :sparkles: Implement Player's Sprite Animation |
+| :art: Apply Soldier Asset to Player |

@@ -36,7 +36,7 @@
 ### 소스코드 작성 시
 `@Docs/Claude/Code/CodeStyleConvention.md`
 
-### Commit, Branch 명 안내 시
+### Commit, Branch 명, PR 제목 안내 시
 `@Docs/Context/GitConvention.md`
 
 ### Github Issues 등록 시
