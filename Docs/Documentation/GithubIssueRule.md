@@ -2,7 +2,7 @@
 
 > Github Issues를 작성할 때의 규칙.
 >
-> 이슈 작성 양식은 `@Docs\Template\FeatureIssueTemplate.md` 를 참고
+> 이슈 작성 양식은 `Docs/Template/IssueTemplate.md` 를 참고
 >
 > 해당 문서는 각 섹션에 대한 작성 규칙을 정의한다.
 
@@ -25,7 +25,7 @@
 - 리스트로 작성하며, 불필요한 표현을 제거해 간결하게 작성한다.
 - 예시 :
     ```markdown
-    ## 2. 배경 / 목적
+    ## 배경 / 목적
 
     - 플레이어 피격 판정 시, 데미지 수치와 공격 판정에 필요한 데이터 동시 전달
     - `DamageInfo` 구조체를 전달하는 방식으로 피격 판정 개선
@@ -37,7 +37,7 @@
 - 리스트로 작성하며, 불필요한 표현을 제거해 간결하게 작성한다.
 - 예시 :
     ``` markdown
-    ## 3. 목표 (To-be)
+    ## 목표 (To-be)
 
     - 플레이어와 몬스터간 공격판정 시, `IDamageable` 인터페이스의 `TakeDamage(DamageInfo info)` 를 통한 공격 판정 개선
     - `DamageInfo` 구조체가 대미지를 주는 객체로부터 받는 객체로 전달
@@ -49,7 +49,7 @@
 - 리스트로 작성하며, 특정 경로의 파일에 어떤 작업이 이뤄지는지 기재한다.
 - 예시 :
     ``` markdown
-    ## 4. 작업 내용
+    ## 작업 내용
 
     - `Assets/Scripts/PlayerController.cs` 수정
     - `Assets/Scripts/Core/IDamageable.cs` 수정
@@ -63,7 +63,7 @@
 - `3. 목표 (To-be)` 및 `4. 작업 내용`의 내용과 유니티 에디터에서의 정상 구동 여부를 체크리스트로 둔다.
 - 예시 :
     ```markdown
-    ## 5. 완료조건 (DoD)
+    ## 완료조건 (DoD)
 
     - [ ] `PlayerController` 객체와 `MonsterController` 객체가 `IDamageable` 인터페이스만을 통해 대미지 판정을 주고받는다
     - [ ] `IDamageable.TakeDamage(DamageInfo info)` 메서드를 통해 공격을 하는 객체로부터 공격을 받는 객체에게 `DamageInfo` 구조체를 전달된다
