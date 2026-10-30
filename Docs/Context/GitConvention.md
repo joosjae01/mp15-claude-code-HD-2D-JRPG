@@ -1,29 +1,29 @@
-## C. Git 컨벤션
+# Git 컨벤션 (Git Convention)
 
-### (1) Commit 컨벤션
+## Commit Convention
 
-| 타입 | 사용처 | 예시 |
+> commit 시 상황에 맞는 gitmoji 를 접두어처럼 사용한다.
+> 
+> commit 내용은 동사로 시작하며, 영어로 간결하게 작성한다.
+
+| gitmoji | 사용처 | 예시 |
 | --- | --- | --- |
-| [Feat] | 기능 개발, 구현 | [Feat] 플레이어 이동 구현 |
-| [Fix] | 버그 수정 (로직 변경) | [Fix] 플레이어 끼임 현상 수정 |
-| [Style] | 기능 변동 없는 가시성을 위한 코드 변경 | [Style] 코드 정렬 |
-| [Docs] | Docs 이하 폴더의 문서 생성 및 삭제/수정 | [Docs] 문서 업데이트 |
-| [Refactor] | 기능 개선을 위한 로직 변경 | [Refactor] NavMesh 대신 A* 알고리즘 직접 구현 |
-| [Chore] | 파일 위치 이동 등 단순 업무 | [Chore] 스크립트 위치 변경 |
+| :sparkles: | 기능 개발, 구현 | :sparkles: Implement Player's Movement |
+| :bug: | 버그 수정 | :bug: Fix Player's Movement |
+| :art: | 기능 변동 없는 가시성을 위한 코드 변경 | :art: Improve Structure |
+| :memo: | Docs 이하 폴더의 문서 생성 및 삭제/수정 | :memo: Modify `example.md` |
+| :recycle: | 기능 개선을 위한 로직 변경 | :recycle: Implement A* Algorithm instead NaveMeshAgent |
+| :truck: | 파일 위치 이동 업무 | :truck: Move `example.cs` → `Example/` |
 
-### (2) Branch 컨벤션
-1. 업로드한 내용을 넘어 작업 범위가 깊어지지 않게 기능 하나가 완성되면 PR을 합니다.
-2. 브랜치명은 `접두사/이름-업무제목` 으로 맞춥니다.
-3. 접두사 종류
+## Branch Convention
 
-| 타입 | 사용처 | 예시 |
+> 작업 범위가 깊어지지 않도록 이슈 하나의 완료를 기준으로 Pull Request 한다.
+>
+> 브랜치 명은 `접두어/사용자계정명-업무제목` 으로 한다.
+>
+> 업무제목을 선정할 때에는 대문자를 사용하지 않으며, 하이픈 문자 (`-`)를 통해 작성한다.
+
+| 접두어 | 사용처 | 예시 |
 | --- | --- | --- |
-| feature | 기능 개발, 구현 | feature/joosjae01-GameManager |
-| fix | 버그 수정 (로직 변경) | fix/joosjae01-PlayerCollision |
-
-### (3) Pull Request 컨벤션
-1. 미리 정해진 PR 양식에 맞춰 내용을 작성합니다.
-2. PR은 사람이 직접 승인합니다.
-3. 머지 후 브랜치를 삭제하도록 합니다.
-4. 머지 제목은 병합하는 브랜치명을 기준으로
-- Merge `main` ← `브랜치명`
+| feature | 기능 개발, 구현 | feature/joosjae01-game-manager |
+| fix | 버그 수정 (로직 변경) | fix/joosjae01-player-collision |
