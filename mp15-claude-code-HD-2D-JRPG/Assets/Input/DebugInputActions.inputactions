@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "DebugInputActions",
+    "maps": [
+        {
+            "name": "Debug",
+            "id": "a4bb40ca-3b0b-4274-b2e7-a8d28f4cf8ad",
+            "actions": [
+                {
+                    "name": "ToggleDayNight",
+                    "type": "Button",
+                    "id": "e04dd6d1-1874-4212-a067-a3361a4b2c14",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a847254a-890c-4d13-936c-f06f9a460366",
+                    "path": "<Keyboard>/n",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleDayNight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
